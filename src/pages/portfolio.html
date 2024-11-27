@@ -12,6 +12,7 @@
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../output.css" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script defer src="../js/handle-modal.js"></script>
     <script type="module" src="../script.js" defer></script>
   </head>
   <body>
@@ -115,7 +116,7 @@
         </nav>
       </header>
       <main class="flex-grow px-8 py-16">
-        <div class="mb-12">
+        <section class="mb-12">
           <h1 class="text-3xl font-bold text-[#5651e5] mb-8">Mes Projets</h1>
 
           <!-- Carrousel -->
@@ -126,19 +127,19 @@
               <div class="relative h-56 overflow-hidden rounded-lg sm:h-64 lg:h-80">
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                   <img
-                    src="https://via.placeholder.com/800x400"
+                    src="../assets/projects/clerk_next_app.png"
                     class="absolute block w-full h-full object-cover"
                     alt="Image 1" />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                   <img
-                    src="https://via.placeholder.com/800x400"
+                    src="../assets/projects/kasa.png"
                     class="absolute block w-full h-full object-cover"
                     alt="Image 2" />
                 </div>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                   <img
-                    src="https://via.placeholder.com/800x400"
+                    src="../assets/projects/nina_carducci.png"
                     class="absolute block w-full h-full object-cover"
                     alt="Image 3" />
                 </div>
@@ -177,12 +178,12 @@
             <!-- Card 1 -->
             <div class="bg-white shadow rounded-lg overflow-hidden">
               <img
-                src="https://via.placeholder.com/300x200"
+                src="../assets/projects/kasa.png"
                 alt="Aperçu du projet 1"
                 class="w-full h-48 object-cover" />
               <div class="p-4">
-                <h2 class="text-lg font-bold text-gray-800">Projet 1</h2>
-                <p class="text-sm text-gray-600">Description courte du projet 1.</p>
+                <h2 class="text-lg font-bold text-gray-800">Kasa</h2>
+                <p class="text-sm text-gray-600">Application web de location de logements.</p>
                 <button
                   data-modal-target="modal-project-1"
                   data-modal-show="modal-project-1"
@@ -194,12 +195,12 @@
             <!-- Card 2 -->
             <div class="bg-white shadow rounded-lg overflow-hidden">
               <img
-                src="https://via.placeholder.com/300x200"
+                src="../assets/projects/clerk_next_app.png"
                 alt="Aperçu du projet 2"
                 class="w-full h-48 object-cover" />
               <div class="p-4">
-                <h2 class="text-lg font-bold text-gray-800">Projet 2</h2>
-                <p class="text-sm text-gray-600">Description courte du projet 2.</p>
+                <h2 class="text-lg font-bold text-gray-800">Next Clerk</h2>
+                <p class="text-sm text-gray-600">Authentification avec Clerk.</p>
                 <button
                   data-modal-target="modal-project-2"
                   data-modal-show="modal-project-2"
@@ -211,12 +212,12 @@
             <!-- Card 3 -->
             <div class="bg-white shadow rounded-lg overflow-hidden">
               <img
-                src="https://via.placeholder.com/300x200"
+                src="../assets/projects/nina_carducci.png"
                 alt="Aperçu du projet 3"
                 class="w-full h-48 object-cover" />
               <div class="p-4">
-                <h2 class="text-lg font-bold text-gray-800">Projet 3</h2>
-                <p class="text-sm text-gray-600">Description courte du projet 3.</p>
+                <h2 class="text-lg font-bold text-gray-800">Nina Carducci</h2>
+                <p class="text-sm text-gray-600">Portfolio de Nina Carducci, photographe.</p>
                 <button
                   data-modal-target="modal-project-3"
                   data-modal-show="modal-project-3"
@@ -243,7 +244,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Modal 1 -->
         <div
