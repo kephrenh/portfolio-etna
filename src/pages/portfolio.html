@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script type="module" src="../script.js" defer></script>
+  </head>
+  <body>
+    <div class="container flex flex-col min-h-screen justify-between w-full mx-auto">
+      <header class="relative w-full bg-white shadow">
+        <nav class="container mx-auto flex justify-between items-center px-6 py-4">
+          <!-- Logo -->
+          <span class="text-2xl font-bold text-[#5651e5] cursor-pointer">MA</span>
+
+          <!-- Liens de navigation -->
+          <ul id="menu" class="hidden sm:flex gap-6 text-sm">
+            <li><a href="../index.html" class="hover:text-[#5651e5] transition">Accueil</a></li>
+            <li>
+              <a href="./apropos.html" class="hover:text-[#5651e5] transition">À propos</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="hover:text-[#5651e5] transition">Portfolio</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="hover:text-[#5651e5] transition">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Navigation mobile button -->
+          <div class="text-center block sm:hidden">
+            <button
+              class="overflow-y-auto text-white transition duration-300 bg-[#5651e5]/90 hover:bg-[#5651e5] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              type="button"
+              data-drawer-target="drawer-top"
+              data-drawer-show="drawer-top"
+              data-drawer-placement="top"
+              aria-controls="drawer-top">
+              <span class="sr-only">Open mobile menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navigation mobile -->
+
+          <div
+            id="drawer-top"
+            class="fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-white dark:bg-gray-800"
+            tabindex="-1"
+            aria-labelledby="drawer-top-label">
+            <button
+              type="button"
+              data-drawer-hide="drawer-top"
+              aria-controls="drawer-top"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              </svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+
+            <div class="flex flex-col">
+              <span class="text-2xl font-bold text-[#5651e5] cursor-pointer">MA</span>
+              <hr class="h-px my-4 bg-[#5651e5]/70 border-0 dark:bg-gray-700" />
+              <ul id="mobile-menu" class="flex flex-col sm:hidden text-sm text-center w-full">
+                <li
+                  class="hover:bg-[#5651e5] group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="../index.html">Accueil</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] w-full group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="./apropos.html">À propos</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] group rounded-md hover:text-white py-2 hover:font-bold transition duration-300">
+                  <a class="py-2" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="flex-grow px-8 py-16">
+        <div class="mb-12">
+          <h1 class="text-3xl font-bold text-[#5651e5] mb-8">Mes Projets</h1>
+
+          <!-- Carrousel -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-[#5651e5] mb-4">Galerie de projets</h2>
+            <div id="carousel" class="relative" data-carousel="static">
+              <!-- Images -->
+              <div class="relative h-56 overflow-hidden rounded-lg sm:h-64 lg:h-80">
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://via.placeholder.com/800x400"
+                    class="absolute block w-full h-full object-cover"
+                    alt="Image 1" />
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://via.placeholder.com/800x400"
+                    class="absolute block w-full h-full object-cover"
+                    alt="Image 2" />
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://via.placeholder.com/800x400"
+                    class="absolute block w-full h-full object-cover"
+                    alt="Image 3" />
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="https://via.placeholder.com/800x400"
+                    class="absolute block w-full h-full object-cover"
+                    alt="Image 4" />
+                </div>
+              </div>
+
+              <!-- Navigation -->
+              <button
+                type="button"
+                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                  <i class="fas fa-chevron-left text-white"></i>
+                </span>
+              </button>
+              <button
+                type="button"
+                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                  <i class="fas fa-chevron-right text-white"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid de cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="Aperçu du projet 1"
+                class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h2 class="text-lg font-bold text-gray-800">Projet 1</h2>
+                <p class="text-sm text-gray-600">Description courte du projet 1.</p>
+                <button
+                  data-modal-target="modal-project-1"
+                  data-modal-show="modal-project-1"
+                  class="mt-4 inline-block text-white bg-[#5651e5] hover:bg-[#4340d0] transition px-4 py-2 rounded-lg text-sm">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="Aperçu du projet 2"
+                class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h2 class="text-lg font-bold text-gray-800">Projet 2</h2>
+                <p class="text-sm text-gray-600">Description courte du projet 2.</p>
+                <button
+                  data-modal-target="modal-project-2"
+                  data-modal-show="modal-project-2"
+                  class="mt-4 inline-block text-white bg-[#5651e5] hover:bg-[#4340d0] transition px-4 py-2 rounded-lg text-sm">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="Aperçu du projet 3"
+                class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h2 class="text-lg font-bold text-gray-800">Projet 3</h2>
+                <p class="text-sm text-gray-600">Description courte du projet 3.</p>
+                <button
+                  data-modal-target="modal-project-3"
+                  data-modal-show="modal-project-3"
+                  class="mt-4 inline-block text-white bg-[#5651e5] hover:bg-[#4340d0] transition px-4 py-2 rounded-lg text-sm">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white shadow rounded-lg overflow-hidden">
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="Aperçu du projet 4"
+                class="w-full h-48 object-cover" />
+              <div class="p-4">
+                <h2 class="text-lg font-bold text-gray-800">Projet 4</h2>
+                <p class="text-sm text-gray-600">Description courte du projet 4.</p>
+                <button
+                  data-modal-target="modal-project-4"
+                  data-modal-show="modal-project-4"
+                  class="mt-4 inline-block text-white bg-[#5651e5] hover:bg-[#4340d0] transition px-4 py-2 rounded-lg text-sm">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div
+          id="modal-project-1"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modals hidden fixed top-0 left-0 right-0 z-50 justify-center items-center w-full h-full p-4 bg-black/50">
+          <div class="relative w-full max-w-lg bg-white rounded-lg shadow">
+            <button
+              type="button"
+              class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+              data-modal-hide="modal-project-1">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Projet 1</h2>
+              <p class="text-gray-600">
+                Description détaillée du projet 1. Vous pouvez ajouter des images, du texte, ou des
+                vidéos ici.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div
+          id="modal-project-2"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modals hidden fixed top-0 left-0 right-0 z-50 justify-center items-center w-full h-full p-4 bg-black/50">
+          <div class="relative w-full max-w-lg bg-white rounded-lg shadow">
+            <button
+              type="button"
+              class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+              data-modal-hide="modal-project-2">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Projet 2</h2>
+              <p class="text-gray-600">
+                Description détaillée du projet 2. Vous pouvez ajouter des images, du texte, ou des
+                vidéos ici.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal 3 -->
+        <div
+          id="modal-project-3"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modals hidden fixed top-0 left-0 right-0 z-50 justify-center items-center w-full h-full p-4 bg-black/50">
+          <div class="relative w-full max-w-lg bg-white rounded-lg shadow">
+            <button
+              type="button"
+              class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+              data-modal-hide="modal-project-3">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Projet 3</h2>
+              <p class="text-gray-600">
+                Description détaillée du projet 3. Vous pouvez ajouter des images, du texte, ou des
+                vidéos ici.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal 4 -->
+        <div
+          id="modal-project-4"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modals hidden fixed top-0 left-0 right-0 z-50 justify-center items-center w-full h-full p-4 bg-black/50">
+          <div class="relative w-full max-w-lg bg-white rounded-lg shadow">
+            <button
+              type="button"
+              class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+              data-modal-hide="modal-project-4">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">Projet 4</h2>
+              <p class="text-gray-600">
+                Description détaillée du projet 4. Vous pouvez ajouter des images, du texte, ou des
+                vidéos ici.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-white shadow-inner px-6 py-4 text-sm">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-gray-600 text-center">© 2024 Mohamed Amoussa - Tous droits réservés</p>
+          <div class="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/mohamed-amoussa"
+              target="_blank"
+              class="hover:text-[#5651e5] transition"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/kephrenh"
+              target="_blank"
+              class="hover:text-[#5651e5] transition"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

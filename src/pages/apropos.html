@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Propos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script type="module" src="../script.js" defer></script>
+  </head>
+  <body>
+    <div class="container flex flex-col min-h-screen justify-between w-full mx-auto">
+      <!-- Header -->
+      <header class="relative w-full bg-white shadow">
+        <nav class="container mx-auto flex justify-between items-center px-6 py-4">
+          <!-- Logo -->
+          <span class="text-2xl font-bold text-[#5651e5] cursor-pointer">MA</span>
+
+          <!-- Liens de navigation -->
+          <ul id="menu" class="hidden sm:flex gap-6 text-sm">
+            <li><a href="../index.html" class="hover:text-[#5651e5] transition">Accueil</a></li>
+            <li>
+              <a href="./apropos.html" class="hover:text-[#5651e5] transition">À propos</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="hover:text-[#5651e5] transition">Portfolio</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="hover:text-[#5651e5] transition">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Navigation mobile button -->
+          <div class="text-center block sm:hidden">
+            <button
+              class="overflow-y-auto text-white transition duration-300 bg-[#5651e5]/90 hover:bg-[#5651e5] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              type="button"
+              data-drawer-target="drawer-top"
+              data-drawer-show="drawer-top"
+              data-drawer-placement="top"
+              aria-controls="drawer-top">
+              <span class="sr-only">Open mobile menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navigation mobile -->
+
+          <div
+            id="drawer-top"
+            class="fixed top-0 left-0 right-0 z-40 w-full p-4 transition-transform -translate-y-full bg-white dark:bg-gray-800"
+            tabindex="-1"
+            aria-labelledby="drawer-top-label">
+            <button
+              type="button"
+              data-drawer-hide="drawer-top"
+              aria-controls="drawer-top"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              </svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+
+            <div class="flex flex-col">
+              <span class="text-2xl font-bold text-[#5651e5] cursor-pointer">MA</span>
+              <hr class="h-px my-4 bg-[#5651e5]/70 border-0 dark:bg-gray-700" />
+              <ul id="mobile-menu" class="flex flex-col sm:hidden text-sm text-center w-full">
+                <li
+                  class="hover:bg-[#5651e5] group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="../index.html">Accueil</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] w-full group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="./apropos.html">À propos</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] group py-2 rounded-md hover:text-white hover:font-bold transition duration-300">
+                  <a class="py-2" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li
+                  class="hover:bg-[#5651e5] group rounded-md hover:text-white py-2 hover:font-bold transition duration-300">
+                  <a class="py-2" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="flex-grow py-16">
+        <div class="px-8 mb-8">
+          <h1 class="text-[#5651e5]">Qui suis-je ?</h1>
+        </div>
+        <div class="grid md:grid-cols-5 mx-auto px-8 gap-8">
+          <!-- Colonne gauche -->
+          <section class="md:col-span-3 z-10">
+            <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+              <ul
+                class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                id="default-tab"
+                data-tabs-toggle="#default-tab-content"
+                role="tablist">
+                <li class="me-2" role="presentation">
+                  <h2
+                    class="text-sm inline-block p-4 border-b-2 rounded-t-lg"
+                    id="profile-tab"
+                    data-tabs-target="#profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false">
+                    Profil
+                  </h2>
+                </li>
+                <li class="me-2" role="presentation">
+                  <h2
+                    class="text-sm inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                    id="formation-tab"
+                    data-tabs-target="#formation"
+                    type="button"
+                    role="tab"
+                    aria-controls="formation"
+                    aria-selected="false">
+                    Formations
+                  </h2>
+                </li>
+                <li class="me-2" role="presentation">
+                  <h2
+                    class="text-sm inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                    id="skills-tab"
+                    data-tabs-target="#skills"
+                    type="button"
+                    role="tab"
+                    aria-controls="skills"
+                    aria-selected="false">
+                    Compétences
+                  </h2>
+                </li>
+              </ul>
+            </div>
+            <div id="default-tab-content">
+              <!-- Profil -->
+              <div
+                class="hidden space-y-2 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab">
+                <h3 class="text-sm text-gray-500 dark:text-gray-400">
+                  <strong class="font-medium text-gray-800 dark:text-white"
+                    >De la comptabilité au développement</strong
+                  >
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Je me rappelle m'être dit un jour que si je pouvais, je ferais un logiciel
+                  comptable moins complexe et plus intuitif. Une recherche menant à une autre, j'ai
+                  découvert l'univers du développement.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Plus je me suis informé, plus je me suis rendu compte de la complexité du travail
+                  qui m'attendait. Ce qui était originellement une idée furtive est devenue ma
+                  motivation pour développer les compétences nécessaires.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Aujourd'hui, mon but est de concevoir des applications qui pourront simplier la
+                  vie aux personnes qui, comme moi, ont pensé un jour que leur outil de travail
+                  était trop compliqué.
+                </p>
+              </div>
+
+              <!-- Formations -->
+              <div
+                class="hidden px-8 py-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                id="formation"
+                role="tabpanel"
+                aria-labelledby="formation-tab">
+                <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-[#5651e5] rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time
+                      class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                      >10/2024 - En cours</time
+                    >
+                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                      Concepteur Développeur d'Applications
+                    </h3>
+                    <p class="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">
+                      ETNA, Ivry-sur-Seine
+                    </p>
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-[#5651e5] rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time
+                      class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                      >07/2023 - 04/2024</time
+                    >
+                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                      Développeur Intégrateur Web
+                    </h3>
+                    <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                      OpenClassrooms, Paris
+                    </p>
+                  </li>
+                  <li class="ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-[#5651e5] rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time
+                      class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                      >06/2021 - 12/2022</time
+                    >
+                    <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                      Administrateur Salesforce
+                    </h3>
+                    <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                      Trailhead by Salesforce, Paris
+                    </p>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Compétences tabs-->
+              <div
+                class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                id="skills"
+                role="tabpanel"
+                aria-labelledby="skills-tab">
+                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                  <ul
+                    class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                    id="default-tab"
+                    data-tabs-toggle="#default-tab-content"
+                    role="tablist">
+                    <li class="me-2" role="presentation">
+                      <h3
+                        class="text-sm inline-block p-4 border-b-2 rounded-t-lg"
+                        id="langages-tab"
+                        data-tabs-target="#langages"
+                        type="button"
+                        role="tab"
+                        aria-controls="langages"
+                        aria-selected="false">
+                        Langages
+                      </h3>
+                    </li>
+                    <li class="me-2" role="presentation">
+                      <h3
+                        class="text-sm inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                        id="outils-tab"
+                        data-tabs-target="#outils"
+                        type="button"
+                        role="tab"
+                        aria-controls="outils"
+                        aria-selected="false">
+                        Outils
+                      </h3>
+                    </li>
+                    <li class="me-2" role="presentation">
+                      <h3
+                        class="text-sm inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                        id="skills-tab"
+                        data-tabs-target="#frameworks"
+                        type="button"
+                        role="tab"
+                        aria-controls="frameworks"
+                        aria-selected="false">
+                        Frameworks
+                      </h3>
+                    </li>
+                  </ul>
+                </div>
+                <div id="default-tab-content">
+                  <!-- Outils -->
+                  <div
+                    class="hidden space-y-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                    id="outils"
+                    role="tabpanel"
+                    aria-labelledby="outils-tab">
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >GitHub</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >GitLab</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >MongoDB</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >MariaDB</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Langages -->
+                  <div
+                    class="hidden space-y-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                    id="langages"
+                    role="tabpanel"
+                    aria-labelledby="langages-tab">
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >HTML</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >CSS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >JavaScript</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >TypeScript</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >SASS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >Python</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 25%"></div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >SQL</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 25%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Frameworks -->
+                  <div
+                    class="hidden space-y-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+                    id="frameworks"
+                    role="tabpanel"
+                    aria-labelledby="frameworks-tab">
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >ReactJS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >NextJS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >ExpressJS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:items-center gap-4">
+                      <span
+                        class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 text-nowrap col-span-3 text-center"
+                        >Tailwind CSS</span
+                      >
+                      <div
+                        class="flex items-center w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700 col-span-7">
+                        <div
+                          class="bg-[#5651e5] h-4 rounded-full dark:bg-blue-500"
+                          style="width: 45%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Colonne droite -->
+          <div
+            class="md:col-span-2 flex items-center justify-center w-full h-auto p-4 m-auto duration-300 ease-in shadow-xl shadow-gray-400 hover:scale-105 rounded-xl">
+            <img class="rounded-xl" src="../../public/assets/images/about-picture.webp" alt="moi" />
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="bg-white shadow-inner px-6 py-4 text-sm">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-gray-600 text-center">© 2024 Mohamed Amoussa - Tous droits réservés</p>
+          <div class="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/mohamed-amoussa"
+              target="_blank"
+              class="hover:text-[#5651e5] transition"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/kephrenh"
+              target="_blank"
+              class="hover:text-[#5651e5] transition"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
